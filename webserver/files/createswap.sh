@@ -4,7 +4,7 @@ val=$?
 if [ $val -gt 0 ];
 then
     mkdir /swp
-    fallocate -l 512M /swp/.swapfile
+    fallocate -l 4096M /swp/.swapfile
     chmod 600 /swp/.swapfile
     mkswap /swp/.swapfile
     swapon /swp/.swapfile
